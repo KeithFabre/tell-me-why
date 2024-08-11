@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import TellMeWhy from './components/TellMeWhy';
 import SpillItOut from './components/SpillItOut';
 import HallOfFame from './components/HallOfFame';
@@ -42,13 +42,13 @@ function WelcomePage() {
     <div className='content'>
 
       <Link to="/" className='link-home'>
-        <img src={casa} className='home-img'/>
+        <img src={casa} alt="casa" className='home-img'/>
       </Link>
       
       {/* acesso regular */}
       <div className='first-access-text'>
         <div className='title'>
-          <img src={logo} className='title-image'/> 
+          <img src={logo} alt="logo" className='title-image'/> 
           <h1>tell me why</h1>
         </div>
         <p>Proibido esquecer que você é capaz!</p>
@@ -85,7 +85,7 @@ function NameInput({ onSubmit }) {
     <div className='first-access-container'>
       <div className='first-access-text'>
         <div className='title'>
-          <img src={logo} className='first-access-image'/> 
+          <img src={logo} alt="logo" className='first-access-image'/> 
           <h1>tell me why</h1>
         </div>
         <p>Proibido esquecer que você é capaz, sim!</p>

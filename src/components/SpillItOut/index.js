@@ -37,18 +37,18 @@ function SpillItOut() {
   return (
     <div className='content spill'>
         <Link to="/" className='link-home'>
-        <img src={casa} className='home-img'/>
+        <img src={casa} alt="casa" className='home-img'/>
       </Link>
       <div className='first-access-text'>
         <div className='title'>
-          <img src={raio} className='title-image'/> 
+          <img src={raio} alt="raio" className='title-image'/> 
           <h1>Põe pra fora</h1>
         </div>
         <p>{name}, hora de celebrar suas vitórias! <br /> (pequenas, médias ou grandes)</p>
       </div>
 
       <div className='first-access-input'>
-        {showRaio && <img src={fogo} className='raio-image' alt='Raio' />} {/* Animated Image */}
+        {showRaio && <img src={fogo} alt="fogo" className='raio-image' />} {/* Animated Image */}
         <input 
           type="text" 
           placeholder="Sem modéstia" 

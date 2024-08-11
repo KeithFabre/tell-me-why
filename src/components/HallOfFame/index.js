@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import trofeu from '../../assets/trofeu.png'
 import casa from '../../assets/casa.png'
 
 function HallOfFame() {
-  const [entries, setEntries] = useState(() => {
+  const [entries] = useState(() => {
     const savedEntries = localStorage.getItem('entries');
     return savedEntries ? JSON.parse(savedEntries) : [];
   });
@@ -17,12 +17,12 @@ function HallOfFame() {
   return (
     <div className='content hall'>
       <Link to="/" className='link-home'>
-        <img src={casa} className="home-img" />
+        <img src={casa} alt="logo" className="home-img" />
       </Link>
 
       <div className='first-access-text'>
         <div className='title'>
-          <img src={trofeu} className='title-image'/> 
+          <img src={trofeu} alt="logo" className='title-image'/> 
           <h1>Hall da Fama</h1>
         </div>
         <p>{name}, você é tão incrível...</p>
@@ -36,7 +36,7 @@ function HallOfFame() {
         <div className='card-container'>
           {entries.map((entry, index) => (
             <div className='card'>
-                <img src={trofeu} className='card-image'/> 
+                <img src={trofeu} alt="trofeu" className='card-image'/> 
                 <div className='card-text'>{entry}</div>
           </div>
           ))}

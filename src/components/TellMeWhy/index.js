@@ -29,6 +29,7 @@ function SpillItOut() {
       // Hide the "raio" image after 1.5 seconds
       setTimeout(() => {
         setShowRaio(false);
+        console.log(showRaio)   // remover caso eu volte a usar a imagem
       }, 1500);
     }
   };
@@ -36,11 +37,11 @@ function SpillItOut() {
   return (
     <div className='content tell'>
         <Link to="/" className='link-home'>
-        <img src={casa} className='home-img'/>
+        <img src={casa} alt="casa" className='home-img'/>
       </Link>
       <div className='first-access-text'>
         <div className='title'>
-          <img src={logo} className='title-image'/> 
+          <img src={logo} alt="logo" className='title-image'/> 
           <h1>tell me why</h1>
         </div>
         <p>{name}, o que você quer fazer? <br /> Te ajudo a recordar como você é capaz! <br />(assim que esta funcionalidade estiver pronta)</p>
@@ -48,7 +49,7 @@ function SpillItOut() {
       </div>
 
       <div className='first-access-input'>
-        {/* {showRaio && <img src={logo} className='raio-image tell' alt='Raio' />} Animated Image */}
+        {/* {showRaio && <img src={logo} alt="logo" className='raio-image tell' alt='Raio' />} Animated Image */}
         <input 
           type="text" 
           placeholder="Quero muito fazer isso aqui: " 
